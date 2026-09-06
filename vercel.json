@@ -1,7 +1,8 @@
 {
+  "framework": null,
+  "installCommand": "echo skip",
+  "buildCommand": "echo skip",
+  "outputDirectory": ".",
   "cleanUrls": false,
-  "trailingSlash": true,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" }
-  ]
+  "trailingSlash": true
 }
