@@ -12,10 +12,73 @@
       .material-symbols-rounded {
         font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 20;
       }
+      html.embed,
+      html.embed body {
+        margin: 0;
+        overflow: hidden;
+        background: #000;
+        width: 393px;
+        height: 852px;
+      }
+      html.embed #root,
+      html.embed .min-h-screen {
+        width: 393px !important;
+        height: 852px !important;
+        min-height: 852px !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        display: block !important;
+        background: #000 !important;
+        overflow: hidden;
+      }
+      html.embed .min-h-screen > aside,
+      html.embed .min-h-screen > [aria-hidden="true"] {
+        display: none !important;
+      }
+      html.embed .min-h-screen > .flex-1 {
+        width: 393px !important;
+        height: 852px !important;
+        overflow: hidden !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        flex: none !important;
+      }
+      html.embed .phone-frame {
+        width: 393px !important;
+        height: 852px !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background: #000 !important;
+      }
+      html.embed .phone-frame > div {
+        width: 393px !important;
+        height: 852px !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+      html.embed #phone-viewport {
+        width: 393px !important;
+        height: 852px !important;
+        border-radius: 0 !important;
+      }
+      html.embed #phone-viewport > [aria-hidden="true"] {
+        display: none !important;
+      }
     </style>
+    <script>
+      (function () {
+        var q = new URLSearchParams(location.search);
+        if (q.get("embed") === "1" || window.self !== window.top) {
+          document.documentElement.classList.add("embed");
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/simulator/assets/index-CuhEi_Dm.js"></script>
     <link rel="stylesheet" crossorigin href="/simulator/assets/index-RO7mq9YT.css">
   </head>
   <body>
-    <div id="root"></div></body>
+    <div id="root"></div>
+  </body>
 </html>
